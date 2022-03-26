@@ -1,0 +1,41 @@
+>> 실행 
+  Command + S, Command + R (한번 클릭 해줘야함.)
+
+>> 기본 구조
+  #include <stdio.h>
+
+  int main(void)
+  {
+
+      return 0;
+  }
+
+>> 자료형
+  char, int, float(4byte), double(8byte)
+  프린트 - %c, %d, %f(%.2f), %o(8진수), %x(16진수)
+
+>> 연산자
+  +, -, *, /, %(나머지) ++, --(증감연산자 +1, -1), +=, -=, *=, %=
+  ==, !=, >, <  0거짓 1참, &&(and), ||(or),  
+  int 변수명 = (x > 0) ? x : -x; 참일경우 x출력 거짓일 경우 -x 출력
+  pow()거듭제곱 ex) double x = pow(2.0, 20.0)
+
+>> (라이브러리들(?))
+  #define 상수명 수 
+  #include <math.h> //pow()거듭제곱, abs()절대값
+  #define _CRT_SECURE_NO_WARNINGS
+
+>> 조건문
+  if(조건)
+  {
+  }
+  
+>> 반복문 
+while(조건)   for(i = 0; i < N; i++)
+{            {
+}            }
+
+while(1), for(;;) // 무한루프  break; 반복문 탈출
+
+>> 기본 입출력
+scanf("%d", &x);  //getchat(); 엔터의 입력을 버퍼시킴

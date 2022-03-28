@@ -1,14 +1,13 @@
 #include <stdio.h>
 
-int main()
+int main(void)
 {
-    int a, b, m1, m2, m3, m4;
-    scanf("%d %d", &a, &b);
-    m1 = a * (b % 10);
-    m2 = a * ((b % 100)/10);
-    m3 = a * (b / 100);
-    m4 = a * b;
-    printf("%d\n%d\n%d\n%d\n", m1, m2, m3, m4);
-    
+    int a, b, c, x;
+    printf("input a,b,and c: ");
+    scanf("%d %d %d", &a, &b, &c);
+    printf("input x: ");
+    scanf("%d", &x);
+    printf("f(%d) = %d", x, a * x*x + b * x + c);
+
     return 0;
 }

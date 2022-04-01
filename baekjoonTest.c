@@ -1,13 +1,20 @@
 #include <stdio.h>
 
-int main(void)
-{
-    int a, b, c, x;
-    printf("input a,b,and c: ");
-    scanf("%d %d %d", &a, &b, &c);
-    printf("input x: ");
-    scanf("%d", &x);
-    printf("f(%d) = %d", x, a * x*x + b * x + c);
+int main()
 
+{
+    int A, B;
+    scanf("%d %d", &A, &B);
+
+    if(A > B){
+        printf(">");
+    }
+    else if(A < B){
+        printf("<");
+    }
+    else{
+        printf("==");
+    }
     return 0;
 }
+

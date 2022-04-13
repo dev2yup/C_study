@@ -88,7 +88,7 @@ long long big;
 
 big = 700000000LL * 700000000;
 
-printf(“%lld”, big);
+printf(“%lld, big);
 
 return 0;
 

@@ -88,7 +88,7 @@ long long big;
 
 big = 700000000LL * 700000000;
 
-printf(“%lld, big);
+printf("%lld", big);
 
 return 0;
 
@@ -104,4 +104,3 @@ return 0;
 //     printf("연필 %d자루는 %d 다스, %d자루 입니다.", pencil, pencil / 12, pencil % 12);
 //     return 0;
 // }
-

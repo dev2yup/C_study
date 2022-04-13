@@ -1,26 +1,21 @@
-#include <stdio.h>
+// #include <stdio.h>
 
-int main()
+// int main()
 
-{
-    int score, test;
-    scanf("%d", &score);
-    if(score >= 90){
-        printf("A");
-    }
-    else if(score >= 80){
-        printf("B");
-    }
-    else if(score >= 70){
-        printf("C");
-    }
-    else if(score >= 60){
-        printf("D");
-    }
-    else{
-        printf("F");
-    }
-
-    return 0;
-}
-
+// {
+//     int year;
+//     scanf("%d", &year);
+//     if(year % 400 == 0)
+//     {
+//         printf("1");
+//     }
+//     else if(year % 100 == 0)
+//     {
+//         printf("1");
+//     }
+//     else if(year % 4 == 0)
+//         printf("1");
+//     else
+//         printf("0");
+//     return 0;
+// } //윤년 판별

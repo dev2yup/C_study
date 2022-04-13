@@ -29,16 +29,79 @@
 
 // }
 
-# include <stdio.h>
-int main(void)
-{
-int grade=150; 
-if(0<=grade&&grade<=100)
-    {
-    if(grade<60)
-        printf(" 불합격입니다.\n");
-    }
-else
-    printf("잘못된 점수입니다.\n");
-return 0; 
+
+// #include <stdio.h>
+
+// #include <limits.h>
+
+// int main(void)
+
+// {
+
+// printf("ULLONG_MAX : %llu\n", ULLONG_MAX);
+
+// printf("LLONG_MAX : %lld\n", LLONG_MAX);
+
+// return 0;
+
+// } 자료형 최대 최 측정
+
+// #include <stdio.h>
+
+// #include <float.h>
+
+// int main(void)
+
+// {
+
+// printf("LDBL_MIN : %lld\n", LDBL_MIN);
+
+// printf("LDBL_MAX : %lld\n", LDBL_MAX);
+
+// printf("LDBL_DIG : %d\n", LDBL_DIG); //정확도 측정
+
+// return 0;
+
+// }
+
+// #include <stdio.h>
+
+// int main(void){
+
+// float C;
+
+// printf("섭씨온도를 입력하세요 : ");
+
+// scanf("%f", &C);
+
+// printf("%.2f C = %.2f F\n", C, (float)9 / 5 * C + 32); 캐스트 연산자 사용해 형 변환
+
+// return 0;
+
+// }
+
+#include <stdio.h>
+
+int main(void) {
+
+long long big;
+
+big = 700000000LL * 700000000;
+
+printf(“%lld”, big);
+
+return 0;
+
 }
+
+// #include <stdio.h>
+
+// int main(void){
+
+//     int pencil;
+//     printf("연필 개수를 입력하세요.: ");
+//     scanf("%d", &pencil);
+//     printf("연필 %d자루는 %d 다스, %d자루 입니다.", pencil, pencil / 12, pencil % 12);
+//     return 0;
+// }
+

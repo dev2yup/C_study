@@ -80,19 +80,19 @@
 
 // }
 
-#include <stdio.h>
+// #include <stdio.h>
 
-int main(void) {
+// int main(void) {
 
-long long big;
+// long long big;
 
-big = 700000000LL * 700000000;
+// big = (long long)700000000 * 700000000LL;
 
-printf("%lld", big);
+// printf("%lld", big);
 
-return 0;
+// return 0;
 
-}
+// }
 
 // #include <stdio.h>
 
@@ -104,3 +104,13 @@ return 0;
 //     printf("연필 %d자루는 %d 다스, %d자루 입니다.", pencil, pencil / 12, pencil % 12);
 //     return 0;
 // }
+#include <stdio.h>
+int main(void)
+{
+    int y = 2;
+    double z = 3;
+    printf("%f\n", y<z?y:z);
+    printf("%lu", sizeof(y<z));
+
+    return 0; 
+}

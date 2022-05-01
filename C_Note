@@ -38,5 +38,5 @@ while(조건)   for(i = 0; i < N; i++)
 while(1), for(;;) // 무한루프  break; 반복문 탈출
 
 >> 기본 입출력
-scanf("%d", &x);  //getchat(); 엔터의 입력을 버퍼시킴
+scanf("%d", &x);  //getchar(); 엔터의 입력을 버퍼시킴
 자료형에 맞지 않는 수를 입력하면 인식 x

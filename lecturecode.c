@@ -54,9 +54,9 @@
 
 // {
 
-// printf("LDBL_MIN : %lld\n", LDBL_MIN);
+// printf("LDBL_MIN : %Le\n", LDBL_MIN);
 
-// printf("LDBL_MAX : %lld\n", LDBL_MAX);
+// printf("LDBL_MAX : %Le\n", LDBL_MAX);
 
 // printf("LDBL_DIG : %d\n", LDBL_DIG); //정확도 측정
 
@@ -104,13 +104,43 @@
 //     printf("연필 %d자루는 %d 다스, %d자루 입니다.", pencil, pencil / 12, pencil % 12);
 //     return 0;
 // }
-#include <stdio.h>
-int main(void)
-{
-    int y = 2;
-    double z = 3;
-    printf("%f\n", y<z?y:z);
-    printf("%lu", sizeof(y<z));
+// #include <stdio.h>
+// int main(void)
+// {
+//     int y = 2;
+//     double z = 3;
+//     printf("%f\n", y<z?y:z);
+//     printf("%lu", sizeof(y<z));
 
-    return 0; 
-}
+//     return 0; 
+// }
+
+
+// #include <stdio.h>
+
+// int main(void){
+//     int math;
+//     char get;
+//     scanf("%d", &math);
+//     printf("%c\n", getchar());
+//     printf("y/n\n");
+//     get = getchar();
+//     printf("%c\n", get);
+
+
+//     switch(math/10){
+//     case 10 :
+//         printf("A");
+//         break;
+//     case 9 :
+//         printf("B");
+//         break;
+//     case 8 :
+//         printf("C");    
+//         break;
+//     default :
+//         printf("DEFAULT");
+//     }
+
+//     return 0;
+// }

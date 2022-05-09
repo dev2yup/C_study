@@ -38,53 +38,53 @@ int main()
     {
         ngnum = -num; //절댓값
         bin8 = ngnum % 2; //1의 보수 구하는 과정
+        ngnum /= 2;
         if(bin8 == 0)
             bin8 = 1;
         else
             bin8 = 0;
-        ngnum /= 2;
         bin7 = ngnum % 2;
+        ngnum /= 2;
         if(bin7 == 0)
             bin7 = 1;
         else
             bin7 = 0;
-        ngnum /= 2;
         bin6 = ngnum % 2;
+        ngnum /= 2;
         if(bin6 == 0)
             bin6 = 1;
         else
             bin6 = 0;
-        ngnum /= 2;
         bin5 = ngnum % 2;
+        ngnum /= 2;
         if(bin5 == 0)
             bin5 = 1;
         else
             bin5 = 0;
-        ngnum /= 2;
         bin4 = ngnum % 2;
+        ngnum /= 2;
         if(bin4 == 0)
             bin4 = 1;
         else
             bin4 = 0;
-        ngnum /= 2;
         bin3 = ngnum % 2;
+        ngnum /= 2;
         if(bin3 == 0)
             bin3 = 1;
         else
             bin3 = 0;
-        ngnum /= 2;
         bin2 = ngnum % 2;
+        ngnum /= 2;
         if(bin2 == 0)
             bin2 = 1;
         else
             bin2 = 0;
-        ngnum /= 2;
         bin1 = ngnum % 2;
+        ngnum /= 2;
         if(bin1 == 0)
             bin1 = 1;
         else
             bin1 = 0;
-        ngnum /= 2;
       
         
         bin8 += 1; //2의 보수를 구하기 위해 +1
@@ -117,7 +117,7 @@ int main()
                                     bin2 = 0;
                                     bin1 += 1;
                                     if(bin1 == 2)
-                                    bin1 = 0;
+                                        bin1 = 0;
                                 }
                             }
                         }

@@ -116,31 +116,59 @@
 // }
 
 
+
 // #include <stdio.h>
+// #include <stdlib.h>
+// #include <time.h>
 
-// int main(void){
-//     int math;
-//     char get;
-//     scanf("%d", &math);
-//     printf("%c\n", getchar());
-//     printf("y/n\n");
-//     get = getchar();
-//     printf("%c\n", get);
-
-
-//     switch(math/10){
-//     case 10 :
-//         printf("A");
-//         break;
-//     case 9 :
-//         printf("B");
-//         break;
-//     case 8 :
-//         printf("C");    
-//         break;
-//     default :
-//         printf("DEFAULT");
+// int main()
+// {
+//     int a = 1;
+//     char yn;
+    
+//     srand(time(NULL));
+//     while(1)
+//     {
+//         printf("추천 로또 번호는: ");
+//         for(int i = 0; i < 6; i++)
+//         {
+//             printf("%d", (rand()%(45-1)+1)+1);
+//             printf(" ");
+//         }
+//         printf("\n다시 생성할까요?: ");
+//         getchar();
+//         scanf("%c", &yn);
+//         printf("\n");
+//         if(yn == 'n')
+//             break;
 //     }
-
 //     return 0;
 // }
+
+#include <stdio.h>
+
+float my_cal(float, char, float);
+int main(){
+    float a, b;
+    float rt;
+    char c;
+
+    printf("수식을 입력하세요.: ");
+    scanf("%f %c %f", &a, &c, &b);
+
+    rt = my_cal(a, c, b);
+    printf("결과값은 %.2f 입니다.", rt);
+    return 0;
+}
+
+float my_cal(float a, char c, float b){
+    if(c == '+')
+        return a + b;
+    if(c == '-')
+        return a - b;
+    if(c == '*')
+        return a * b;
+    if(c == '/')
+        return a / b;
+    return 0;
+}

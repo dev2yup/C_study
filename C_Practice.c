@@ -39,67 +39,78 @@
 //     }
 // }
 
+// #include <stdio.h>
+// #define _CRT_SECURE_NO_WARNINGS
+// int main(void)
+// {
+//     while(1)
+//     {
+//         char o;
+//         int first, last;
+    
+//         printf("수식을 입력하세요: ");
+//         scanf("%d %c %d", &first, &o, &last);
+        
+//         if(o == '+')
+//         {
+//             printf("%d %c %d = %d\n", first, o, last, first + last);
+//         }
+        
+//         else if(o == '-')
+//         {
+//             printf("%d %c %d = %d\n", first, o, last, first - last);
+//         }
+        
+//         else if(o == '*')
+//         {
+//             printf("%d %c %d = %d\n", first, o, last, first * last);
+//         }
+        
+//         else if(o == '/')
+//         {
+//             printf("%d %c %d = %d\n", first, o, last, first / last);
+//         }
+        
+//         else if(o == '%')
+//         {
+//             printf("%d %c %d = %d\n", first, o, last, first % last);
+//         }
+    
+//         else
+//         {
+//             printf("올바르지 않은 입력입니다.\n");
+//             continue;
+//         }
+//         getchar();
+
+//         printf("계속 진행하시겠습니까? (y/n)");
+//         scanf("%c", &o);
+//         if(o == 'n' || o == 'N')
+//         {
+//             printf("프로그램을 종료하겠습니다.");
+//             break;
+//         }
+//         else if(o == 'y' || o == 'Y')
+//         {
+//             continue;
+//         }
+
+//         else
+//         {
+//             printf("잘못된 입력입니다.\n");
+//         }
+    
+//         return 0;
+//         }
+// }
+
 #include <stdio.h>
-#define _CRT_SECURE_NO_WARNINGS
-int main(void)
-{
-    while(1)
-    {
-        char o;
-        int first, last;
-    
-        printf("수식을 입력하세요: ");
-        scanf("%d %c %d", &first, &o, &last);
-        
-        if(o == '+')
-        {
-            printf("%d %c %d = %d\n", first, o, last, first + last);
-        }
-        
-        else if(o == '-')
-        {
-            printf("%d %c %d = %d\n", first, o, last, first - last);
-        }
-        
-        else if(o == '*')
-        {
-            printf("%d %c %d = %d\n", first, o, last, first * last);
-        }
-        
-        else if(o == '/')
-        {
-            printf("%d %c %d = %d\n", first, o, last, first / last);
-        }
-        
-        else if(o == '%')
-        {
-            printf("%d %c %d = %d\n", first, o, last, first % last);
-        }
-    
-        else
-        {
-            printf("올바르지 않은 입력입니다.\n");
-            continue;
-        }
-        getchar();
 
-        printf("계속 진행하시겠습니까? (y/n)");
-        scanf("%c", &o);
-        if(o == 'n' || o == 'N')
-        {
-            printf("프로그램을 종료하겠습니다.");
-            break;
-        }
-        else if(o == 'y' || o == 'Y')
-        {
-            continue;
-        }
+int main(){
+    int a, b = 10;
+    scanf("%d", &a);
+    printf("%d\n", a % b);
+    printf("%d", a / b);
 
-        else
-        {
-            printf("잘못된 입력입니다.\n");
-        }
-    
-        return 0;
-        }
+    return 0;
 }

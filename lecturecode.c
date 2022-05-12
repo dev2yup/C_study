@@ -16,19 +16,6 @@
 //     return 0;
 // }
 
-// #include <stdio.h>
-
-// int main(void){
-//     int a=2;
-//     float b=6123.1; 
-//     printf("1234567890\n"); 
-//     printf("안녕%1.2f\n", b); 
-//     printf("   ");
-    
-//     return 0;
-
-// }
-
 
 // #include <stdio.h>
 
@@ -95,16 +82,6 @@
 // }
 
 // #include <stdio.h>
-
-// int main(void){
-
-//     int pencil;
-//     printf("연필 개수를 입력하세요.: ");
-//     scanf("%d", &pencil);
-//     printf("연필 %d자루는 %d 다스, %d자루 입니다.", pencil, pencil / 12, pencil % 12);
-//     return 0;
-// }
-// #include <stdio.h>
 // int main(void)
 // {
 //     int y = 2;
@@ -114,7 +91,6 @@
 
 //     return 0; 
 // }
-
 
 
 // #include <stdio.h>

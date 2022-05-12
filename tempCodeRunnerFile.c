@@ -2,19 +2,20 @@
 
 void bin_dec();
 void bin_add();
+void bin_sub();
 
 int main()
 {
-    int num;
+    int dec_plusber;
     printf("1.이진수 변환기 2.이진수 덧셈기 3.이진수 뺄셈기\n");
     printf("번호를 선택하세요.: ");
-    scanf("%d", &num);
-    if(num == 1)
+    scanf("%d", &dec_plusber);
+    if(dec_plusber == 1)
         bin_dec();
-    else if(num == 2)
+    else if(dec_plusber == 2)
         bin_add();
-    else if(num == 3)
-        ;
+    else if(dec_plusber == 3)
+        bin_sub();
     return 0;
 }
 
@@ -27,7 +28,7 @@ void bin_dec() // 2진수 -> 10진수 변환기
     printf("8비트 이진수를 입력하세요.: ");
     scanf("%lld", &bincode);
     if(bincode / 10000000 == 1) //부호비트가 음수인지 판별
-    {
+    {                           // 음수일 때
         bin1 = 0;
         bincode %= 10000000;
         if(bincode / 1000000 == 1)
@@ -134,143 +135,103 @@ void bin_dec() // 2진수 -> 10진수 변환기
 
 void bin_add() // 이진수 덧셈기
 {
-    long long bincode1, bincode2, bin_plus, temp_plus;
-    int bin1 = 0, bin2 = 0, bin3 = 0, bin4 = 0, bin5 = 0, bin6 = 0, bin7 = 0, bin8 = 0;
-
+    long long bincode1, bincode2, temp1, temp2, deccode1 = 0, deccode2 = 0;
+    int i = 0, dec_plus, tmp, bin1, bin2, bin3, bin4, bin5, bin6, bin7, bin8;
     printf("첫 번째 8비트 이진수를 입력하세요.: ");
     scanf("%lld", &bincode1);
     printf("두 번재 8비트 이진수를 입력하세요.: ");
     scanf("%lld", &bincode2);
 
-    bin_plus = bincode1 + bincode2;
-    printf("%lld\n", bin_plus);
-    temp_plus = bin_plus % 10;
-    if(temp_plus % 10 == 2) ////// 8
-    {
-        bin8 = 0;
-        bin7 += 1;
-    }
-    else if(temp_plus % 10 == 1)
-        bin8 = 1;
-    else
-        bin8 = 0;
+    while(i < 8) //bincode1 십진수로 변환
+        {
+        temp1 = bincode1 % 10;
+        bincode1 /= 10;
+        for(int j = 0; j < i; j++)
+                temp1 *= 2;
+        deccode1 += temp1;
+        i++;
+        }
+    i = 0;
+
+    while(i < 8) //bincode2 십진수로 변환
+        {
+        temp2 = bincode2 % 10;
+        bincode2 /= 10;
+        for(int j = 0; j < i; j++)
+                temp2 *= 2;
+        deccode2 += temp2;
+        i++;
+        }
+    dec_plus = deccode1 + deccode2; //두 십진수 더하기
     
-    temp_plus = bin_plus % 100;
-    if(temp_plus / 10 == 2) ////// 7
-    {
-        bin7 += 2;
-        if(bin7 == 3)
-        {
-            bin7 = 1;
-            bin6 += 1;
-        }
-        else
-            bin7 = 0;
-            bin6 += 1;
-    }
-    else if(temp_plus / 10 == 1)
-        bin7 += 1;
-    else 
-        bin7 += 0;
-    temp_plus = bin_plus % 1000;
-    if(temp_plus / 100 == 2) ////// 6
-    {
-        bin6 += 2;
-        if(bin6 == 3)
-        {
-            bin6 = 1;
-            bin5 += 1;
-        }
-        else
-            bin6 = 0;
-            bin5 += 1;
-    }
-    else if(temp_plus / 100 == 1)
-        bin6 = 1;
-    else 
-        bin6 += 0;
-    temp_plus = bin_plus % 10000;
-    if(temp_plus / 1000 == 2) ////// 5
-    {
-        bin5 += 2;
-        if(bin5 == 3)
-        {
-            bin5 = 1;
-            bin4 += 1;
-        }
-        else
-            bin5 = 0;
-            bin4 += 1;
-    }
-    else if(bin_plus / 1000 == 1)
-        bin5 += 1;
-    else 
-        bin5 += 0;
-    temp_plus = bin_plus % 100000;
-    if(temp_plus / 10000 == 2) ////// 4
-    {
-        bin4 += 2;
-        if(bin4 == 3)
-        {
-            bin4 = 1;
-            bin3 += 1;
-        }
-        else    
-            bin4 = 0;
-            bin3 += 1;
-    }
-    else if(temp_plus / 10000 == 1)
-        bin4 = 1;
-    else 
-        bin4 = 0;
-    temp_plus = bin_plus % 1000000;
-    if(temp_plus / 100000 == 2) ////// 3
-    {
-        bin3 += 2;
-        if(bin3 == 3)
-        {
-            bin3 = 1;
-            bin2 += 1;
-        }
-        else   
-            bin3 = 0;
-            bin2 += 1;
-    }
-    else if(temp_plus / 100000 == 1)
-        bin3 = 1;
-    else 
-        bin3 = 0;
-    temp_plus = bin_plus % 10000000;
-    if(temp_plus / 1000000 == 2) ////// 2
-    {
-        bin2 += 2;
-        if(bin2 == 3)
-        {
-            bin2 = 1;
-            bin1 += 1;
-        }
-        else
-            bin2 = 0;
-            bin1 += 1;
-    }
-    else if(temp_plus / 1000000 == 1)
-        bin2 = 1;
-    else 
-        bin2 = 0;
-    if(bin_plus / 10000000 == 2) ////// 1
-    {
-        bin1 += 2;
-        if(bin1 == 3)
-        {
-            bin1 = 1;
-        }
-        else
-            bin1 = 0;
-    }
-    else if(bin_plus / 10000000 == 1)
-        bin1 = 1;
-    else
-        bin1 = 0;
+        tmp = dec_plus;  // 더한 십진수 이진수로 변환
+        bin8 = dec_plus % 2;
+        dec_plus /= 2;
+        bin7 = dec_plus % 2;
+        dec_plus /= 2;
+        bin6 = dec_plus % 2;
+        dec_plus /= 2;
+        bin5 = dec_plus % 2;
+        dec_plus /= 2;
+        bin4 = dec_plus % 2;
+        dec_plus /= 2;
+        bin3 = dec_plus % 2;
+        dec_plus /= 2;
+        bin2 = dec_plus % 2;
+        dec_plus /= 2;
+        bin1 = dec_plus % 2;
+        dec_plus /= 2;
+        printf("두 이진수의 합은 %d%d%d%d%d%d%d%d 이고, 십진수로 %d 입니다.\n",bin1, bin2, bin3, bin4, bin5, bin6, bin7, bin8, tmp);
+}
+
+void bin_sub() // 이진수 뺄셈기
+{
+    long long bincode1, bincode2, temp1, temp2, deccode1 = 0, deccode2 = 0;
+    int i = 0, tmp, dec_minus, bin1, bin2, bin3, bin4, bin5, bin6, bin7, bin8;
+    printf("첫 번째 8비트 이진수를 입력하세요.: ");
+    scanf("%lld", &bincode1);
+    printf("두 번재 8비트 이진수를 입력하세요.: ");
+    scanf("%lld", &bincode2);
     
-    printf("%d%d%d%d%d%d%d%d", bin1, bin2, bin3, bin4, bin5, bin6, bin7, bin8);
+    while(i < 8)  
+        {
+        temp1 = bincode1 % 10;
+        bincode1 /= 10;
+        for(int j = 0; j < i; j++)
+                temp1 *= 2;
+        deccode1 += temp1;
+        i++;
+        }
+    i = 0;
+
+    while(i < 8)
+        {
+        temp2 = bincode2 % 10;
+        bincode2 /= 10;
+        for(int j = 0; j < i; j++)
+                temp2 *= 2;
+        deccode2 += temp2;
+        i++;
+        }
+    
+    dec_minus = deccode1 - deccode2; // 빼기
+    
+    tmp = dec_minus; // 뺀 십진수값을 이진수로 변환
+        bin8 = dec_minus % 2;
+        dec_minus /= 2;
+        bin7 = dec_minus % 2;
+        dec_minus /= 2;
+        bin6 = dec_minus % 2;
+        dec_minus /= 2;
+        bin5 = dec_minus % 2;
+        dec_minus /= 2;
+        bin4 = dec_minus % 2;
+        dec_minus /= 2;
+        bin3 = dec_minus % 2;
+        dec_minus /= 2;
+        bin2 = dec_minus % 2;
+        dec_minus /= 2;
+        bin1 = dec_minus % 2;
+        dec_minus /= 2;
+        printf("두 이진수의 차는 %d%d%d%d%d%d%d%d 이고, 십진수로 %d 입니다.\n",bin1, bin2, bin3, bin4, bin5, bin6, bin7, bin8, tmp);
 }

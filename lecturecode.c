@@ -81,17 +81,6 @@
 
 // }
 
-// #include <stdio.h>
-// int main(void)
-// {
-//     int y = 2;
-//     double z = 3;
-//     printf("%f\n", y<z?y:z);
-//     printf("%lu", sizeof(y<z));
-
-//     return 0; 
-// }
-
 
 // #include <stdio.h>
 // #include <stdlib.h>
@@ -121,30 +110,57 @@
 //     return 0;
 // }
 
-#include <stdio.h>
+// #include <stdio.h>
 
-float my_cal(float, char, float);
-int main(){
-    float a, b;
-    float rt;
-    char c;
+// int power(int, int);
+// int main()
+// {
+//     int n, m, result;
+    
+//     printf("수 를  입력하세요.: ");
+//     scanf("%d",&n);
+//     printf("제곱 수를 입력하세요.: ");
+//     scanf("%d", &m);
 
-    printf("수식을 입력하세요.: ");
-    scanf("%f %c %f", &a, &c, &b);
+//     result = power(n, m);
+//     printf("%d", result);
 
-    rt = my_cal(a, c, b);
-    printf("결과값은 %.2f 입니다.", rt);
-    return 0;
-}
+//     return 0;
+// }
 
-float my_cal(float a, char c, float b){
-    if(c == '+')
-        return a + b;
-    if(c == '-')
-        return a - b;
-    if(c == '*')
-        return a * b;
-    if(c == '/')
-        return a / b;
-    return 0;
-}
+// int power(int n, int m) // n^m
+// {
+
+//     int i;
+//     int pow = 1;
+//     if(m > 0)
+//     {
+//         for (i = 0; i < m; ++i)
+
+//             pow *= n;
+
+//         return pow;
+//     }
+//     else if(m < 0)
+//     {
+//         for(i = 0; i > m; --i)
+
+//             pow *= n;
+//         printf("1/%d\n", pow);
+
+//     }
+// }
+
+// #include <stdio.h>
+
+// int main(void)
+
+// {
+//     extern int a, b, c;
+//     printf("%3d%3d%3d\n", a, b, c);
+
+//     return 0;
+
+// }
+// int a = 1, b = 2, c = 3;  // 외부변수
+

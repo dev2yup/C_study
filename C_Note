@@ -40,3 +40,13 @@ while(1), for(;;) // 무한루프  break; 반복문 탈출
 >> 기본 입출력
 scanf("%d", &x);  //getchar(); 엔터의 입력을 버퍼시킴
 자료형에 맞지 않는 수를 입력하면 인식 x
+
+
+>> 스토리지 클래스
+auto register extern static
+auto는 생략 가능
+register 레지스터에 변수 저장
+extrern 전역변수(외부변수)를 정의할 때 생략 가능
+외부변수 정의할 때 extern 명시하고자 하면 외부변수 정의와 외부변수 선언을 구분해야함
+ex)정의 extern int hours = 0 선언 extern int hours;
+static 변수가 지역변수에 적용되면 정적 변수가 되어 프로그램이 끝날 때 까지 그 값을 유지

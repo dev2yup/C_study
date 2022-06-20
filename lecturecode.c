@@ -233,3 +233,95 @@
 //         printf("%d번 째의 등급은 %c\n", j, grade[j]);
 //     }    
 // }
+
+/******* 회문인지 아닌지 판별하는 프로그램 *******/
+// #include <stdio.h>
+// #include <string.h>
+
+// int front_back(char []);
+// int main()
+// {
+//     int result;
+//     char str[20];
+//     printf("문자열 입력: ");
+//     scanf("%s", str);
+//     result = front_back(str);
+
+//     if (result == 1)
+//         printf("%s는 회문입니다.", str);
+//     else
+//         printf("%s는 회문이 아닙니다.", str);
+
+// }
+
+// int front_back(char a[])
+// {
+//     int i = 0;
+//     i = strlen(a);
+//     for (int j = 0; j < i / 2; j++)
+//     {
+//         if (a[j] != a[i - 1 - j])
+//             return 0;   
+        
+//     }
+//     return 1;
+// }
+
+// #include <stdio.h>
+// #include <string.h>
+
+// int my_strsearch(char a[], char b[]);
+// int main()
+// {
+//     char a[20];
+//     char b[20];
+//     int result;
+//     printf("첫 번째 문자열을 입력하세요.: ");
+//     scanf("%[^\n]", a);
+//     getchar();
+//     printf("두 번째 문자열을 입력하세요.: ");
+//     scanf("%s", b);
+
+//     result = my_strsearch(a, b);
+//     printf("%d", result);
+// }
+
+// int my_strsearch(char a[], char b[])
+// {
+//     int alen = 0, blen =0, temp;
+//     alen = strlen(a);
+//     blen = strlen(b);
+   
+//     for (int i = 0; i < 20; i++)
+//     {
+//         temp = i;
+//         for (int j = 0; j < 20; j++)
+//         {
+//             if (a[temp] == b[j])
+//                 if (j + 1 == blen)
+//                     return i;
+//                 else
+//                 {
+//                     temp += 1;
+//                 }
+//             else
+//                 break;
+//         }
+//     }
+//     return -1;
+// }
+
+#include <stdio.h>
+#include <stdlib.h>
+
+void test_fun(char [][*]);
+int main()
+{
+  int value, input;
+  double result;
+  value = atoi("134.242");
+  input = atoi("12323");
+  result = strtoul("af", NULL, 16);
+  printf("%d %d\n", value, input);
+  printf("%lf\n", result);
+}

@@ -122,25 +122,27 @@
 // }  // 2의 n승 구하는 함수
 
 
-#include <stdio.h>
+// #include <stdio.h>
 
-void re_bin_num(int);
+// void re_bin_num(int);
 
-int main()
-{
-    int n;
-    printf("십진수를 입력하세요: ");
-    scanf("%d", &n);
-    re_bin_num(n);
-}
+// int main()
+// {
+//     int n;
+//     printf("십진수를 입력하세요: ");
+//     scanf("%d", &n);
+//     re_bin_num(n);
+// }
 
-void re_bin_num(int n)
-{
-    if (n < 2)
-        printf("%d", n);
-    else
-    {
-        re_bin_num(n / 2);
-        printf("%d", n % 2);
-    }
-}
+// void re_bin_num(int n)
+// {
+//     if (n < 2)
+//         printf("%d", n);
+//     else
+//     {
+//         re_bin_num(n / 2);
+//         printf("%d", n % 2);
+//     }
+// }
+
+

@@ -310,18 +310,3 @@
 //     }
 //     return -1;
 // }
-
-#include <stdio.h>
-#include <stdlib.h>
-
-void test_fun(char [][*]);
-int main()
-{
-  int value, input;
-  double result;
-  value = atoi("134.242");
-  input = atoi("12323");
-  result = strtoul("af", NULL, 16);
-  printf("%d %d\n", value, input);
-  printf("%lf\n", result);
-}
